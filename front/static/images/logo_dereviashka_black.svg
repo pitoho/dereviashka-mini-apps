@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<svg width="373" height="405.96" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" data-name="Слой 1">
+ <g class="layer">
+  <title>Layer 1</title>
+  <rect height="37.68" id="svg_1" width="257.64" x="70.17" y="92.7"/>
+  <rect height="30.68" id="svg_2" width="72.77" x="70.17" y="334.19"/>
+  <rect height="16.68" id="svg_3" transform="matrix(1 0 0 1 0 0) matrix(0 1 -2.07066 0 -91.5953 0)" width="272.17" x="92.43" y="-84.07"/>
+  <rect height="16.68" id="svg_4" transform="matrix(1 0 0 1 0 0) matrix(0 1 -1.9636 0 -142.545 0)" width="186.89" x="177.98" y="-146.93"/>
+  <rect height="16.68" id="svg_5" transform="matrix(1 0 0 1 0 0) matrix(0 1 -2.01713 0 -204.494 0)" width="123.57" x="241.29" y="-200.05"/>
+  <rect height="16.68" id="svg_6" transform="matrix(1 0 0 1 0 0) matrix(0 1 -1.42827 0 -116.133 0)" width="123.57" x="241.3" y="-270.17"/>
+  <rect height="16.68" id="svg_7" transform="matrix(0 1.12176 -2.23126 0 -354.776 -44.5498)" width="186.89" x="177.98" y="-305.82"/>
+  <rect height="39.68" id="svg_8" width="192.56" x="113.26" y="154.98"/>
+  <rect height="28.68" id="svg_9" width="52.33" x="253.49" y="336.19"/>
+  <rect height="30.68" id="svg_10" transform="matrix(1 0 0 1 0 0)" width="86.81" x="183.36" y="241.3"/>
+  <rect height="16.68" id="svg_11" transform="matrix(1 0 0 1 0 0)" width="16.68" x="218.98" y="307.62"/>
+ </g>
+</svg>

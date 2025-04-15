@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="../static/styles/style.css">
+    <link rel="stylesheet" href="../static/styles/menu.css">
+    <link rel="stylesheet" href="../static/styles/carousel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <header>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="logo-block">
+                <a href="/"><img src="../static/images/logo_dereviashka_black.svg" alt=""></a>
+            </div>
+            <div class="profile-block">
+                <a href="/profile"><img src="../static/images/profile-icon-black.svg" alt=""></a>
+            </div>  
+            <nav class="menu">
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/catalog">Каталог</a></li>
+                    <li><a href="/services">Услуги</a></li>
+                    <li><a href="/delivery">Доставка и оплата</a></li>
+                    <li><a href="/contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="main">
+            <div class="hello-banner">
+                <h1>Магазин дверей "Деревяшка"</h1>
+                <h3>ШИРОКИЙ ВЫБОР МЕЖКОМНАТНЫХ ДВЕРЕЙ И ФУРНИТУРЫ</h3>
+            </div>
+            <h2>Ассортимент</h2>
+            <div class="carousel">
+                
+                <div class="slides">
+                    <div class="slide">
+                        <p>Натуральный шпон</p>
+                        <button class="catalog-btn" onclick="window.location.href='/catalog'">Перейти в каталог</button>
+                        <div class="shadow"></div>
+                    </div>
+                    <div class="slide">
+                        <p>Экошпон</p>
+                        <button  class="catalog-btn" onclick="window.location.href='/catalog'">Перейти в каталог</button>
+                        <div class="shadow"></div>
+                    </div>
+                    <div class="slide">
+                        <p>Эмаль</p>
+                        <button class="catalog-btn" onclick="window.location.href='/catalog'">Перейти в каталог</button>
+                        <div class="shadow"></div>
+                    </div>
+                    <div class="slide">
+                        <p>Фурнитура</p>
+                        <button class="catalog-btn" onclick="window.location.href='/catalog'">Перейти в каталог</button>
+                        <div class="shadow"></div>
+                        
+                    </div>
+                    <div class="slide">
+                        <p>Входные двери</p>
+                        <button class="catalog-btn" onclick="window.location.href='/catalog'">Перейти в каталог</button>
+                        <div class="shadow"></div>
+                    </div>
+                    
+                </div>
+                
+                <div class="arrow prev">&#10094;</div>
+                <div class="arrow next">&#10095;</div>
+                
+                <div class="indicators">
+                    <div class="indicator active"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                </div>
+            </div>
+            <h2>Наши преимущества</h2>
+            <div class="cards-main">
+                <div class="column-main">
+                    <div class="card-main">
+                        <img src="../static/images/money.svg" alt="">
+                        <h3>Цены</h3>
+                        <p>Работаем напрямую от производителя</p>
+                    </div>
+                    <div class="card-main">
+                        <img src="../static/images/delivery.svg" alt="">
+                        <h3>Доставим быстро</h3>
+                        <p>Оперативная доставка дверей на дом</p>
+                    </div>
+                    <div class="card-main">
+                        <img src="../static/images/tools.svg" alt="">
+                        <h3>Монтаж</h3>
+                        <p>У нас работают только профессиональные монтажники</p>
+                    </div>
+                </div>
+                <div class="column-main">
+                    <div class="card-main">
+                        <img src="../static/images/tick.svg" alt="">
+                        <h3>Гарантия</h3>
+                        <p>Даем гарантию на все виды дверей</p>
+                    </div>
+                    <div class="card-main">
+                        <img src="../static/images/gear.svg" alt="">
+                        <h3>Нестандартные решения</h3>
+                        <p>Возможен заказ дверей по индивидуальным размерам</p>
+                    </div>
+                    <div class="card-main">
+                        <img src="../static/images/like.svg" alt="">
+                        <h3>Выбор есть!</h3>
+                        <p>Большой ассортимент моделей входных и межкомнатных дверей</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="foo-info">
+                <div class="foo-block">
+                <p>Телефон: +7 (916) 030-40-94</p>
+                <p>E-mail: dveri2dereviashka@yandex.ru</p>
+                
+            </div>
+            <div class="foo-block">
+                <p>ИП Базаркин Алексей Викторович</p>
+                <p>ИНН: 502602905822</p>
+                <p>ОГРН: 323508100171838</p>
+            </div>
+            </div>
+            
+            <div class="address">г.о. Люберцы, р.п. Томилино, Новорязанское ш., 25-й км, с. 16, Центр Строймаркет, пав. 137Г-64Д</div>
+        </footer>
+        <script src="../static/scripts/animations.js"></script>
+</body>
+</html>

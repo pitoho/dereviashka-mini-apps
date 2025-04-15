@@ -1,0 +1,145 @@
+.profile-container {
+    margin-top: 100px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-header {
+    margin-top: 100px;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.user-info {
+    margin-top: 1rem;
+}
+
+.orders-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.orders-list {
+    margin: 1.5rem 0;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.order-product {
+    font-weight: 600;
+    flex: 2;
+}
+
+.order-price {
+    flex: 1;
+    text-align: right;
+    color: #333;
+    font-weight: 500;
+}
+
+.order-date {
+    flex: 1;
+    text-align: right;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+.checkout-button {
+    padding: 1rem 2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+    background-color: #45a049;
+}
+
+.checkout-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .order-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .order-price, .order-date {
+        text-align: left;
+        width: 100%;
+    }
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.order-image {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.order-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.order-info {
+    flex-grow: 1;
+}
+
+.remove-order {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+    padding: 0.2rem 0.5rem;
+}
+
+.remove-order:hover {
+    color: #ff0000;
+}
+

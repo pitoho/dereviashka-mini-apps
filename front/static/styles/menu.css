@@ -1,0 +1,94 @@
+   /* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+} */
+
+/* Стили для кнопки меню */
+.menu-toggle {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.menu-toggle span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle span:nth-child(1) {
+    top: 0;
+}
+
+.menu-toggle span:nth-child(2) {
+    top: 13px;
+}
+
+.menu-toggle span:nth-child(3) {
+    top: 26px;
+}
+
+/* Анимация в крестик */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 13px;
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 13px;
+}
+
+/* Выпадающее меню */
+.menu {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.menu.active {
+    transform: translateY(0);
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}

@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.carousel {
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+    position: relative;
+    width: 95%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 2px 5px black;
+}
+.catalog-btn{
+    margin: 20px;
+    z-index: 5;
+    width: 180px;
+    font-size: 17px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.77);
+    border: none;
+    color: rgb(81, 67, 40);
+}
+.slide:nth-child(2) { 
+    background-image: url(../images/natural-veneer.jpg);
+    background-size: cover;
+}
+.slide:nth-child(3) { 
+    background-image: url(../images/eco-veneer.jpg);
+    background-size: cover;
+}
+.slide:nth-child(4) { 
+    background-image: url(../images/emal.jpg);
+    background-size: cover;
+ }
+.slide:nth-child(5) {
+    background-image: url(../images/door-handle.jpg);
+    background-size: cover;
+}
+.slide:nth-child(6) {
+    background-image: url(../images/front-door.jpg);
+    background-size: cover;
+}
+.shadow{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.266);
+    width: 100%;
+    height: 100%;
+}
+.slide>p{
+    z-index: 5;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #333;
+    z-index: 10;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.arrow:hover {
+    background: rgba(255,255,255,0.9);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.indicator.active {
+    background: white;
+}

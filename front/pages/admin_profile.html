@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../static/styles/style.css">
+    <link rel="stylesheet" href="../static/styles/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <div class="logo-block">
+            <a href="/"><img src="../static/images/logo_dereviashka_black.svg" alt=""></a>
+        </div>
+        <div class="profile-block">
+            <a href="/profile"><img src="../static/images/profile-icon-black.svg" alt=""></a>
+        </div>  
+        <nav class="menu">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/catalog">Каталог</a></li>
+                <li><a href="/services">Услуги</a></li>
+                <li><a href="/delivery">Доставка и оплата</a></li>
+                <li><a href="/contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="main">
+        <div class="admin-actions">
+            <h2>Администрирование</h2>
+            
+            <div class="accordion-item">
+                <button class="accordion">Добавить новый товар</button>
+                <div class="panel">
+                    <div class="panel-content">
+                        <form id="productForm" method="POST" action="/add-product" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="name">Название товара:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Категория:</label>
+                                <select id="category" name="category" required></select>
+                            </div>
+                            
+                            <div class="form-group" id="subcategoryGroup" style="display: none;">
+                                <label for="subcategory">Подкатегория:</label>
+                                <select id="subcategory" name="subcategory">
+                                    <option value="">-- Нет подкатегории --</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="description">Описание:</label>
+                                <textarea id="description" name="description" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="price">Цена (руб):</label>
+                                <input type="number" id="price" name="price" min="0" step="0.01" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="image">Изображение:</label>
+                                <input type="file" id="image" name="image" accept="image/*" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="in_stock">В наличии:</label>
+                                <input type="checkbox" id="in_stock" name="in_stock" checked>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Добавить товар</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <button class="accordion">Редактировать товар</button>
+                <div class="panel">
+                    <div class="panel-content">
+                        <div class="edit-product-form">
+                            <div class="search-form">
+                                <input type="text" id="searchProduct" placeholder="Введите название товара" style="height: 39px; border-radius: 5px; width: 70%; text-align: center; margin-bottom: 20px;">
+                                <button onclick="searchProduct()" class="submit-btn">Найти</button>
+                            </div>
+                            
+                            <div id="productDetails" class="product-details">
+                                <form id="editProductForm" method="POST" action="/update-product" enctype="multipart/form-data">
+                                    <input type="hidden" id="productId" name="id">
+                                    
+                                    <div class="form-group">
+                                        <label for="editName">Название товара:</label>
+                                        <input type="text" id="editName" name="name" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="editCategory">Категория:</label>
+                                        <select id="editCategory" name="category" required></select>
+                                    </div>
+                                    
+                                    <div class="form-group" id="editSubcategoryGroup" style="display: none;">
+                                        <label for="editSubcategory">Подкатегория:</label>
+                                        <select id="editSubcategory" name="subcategory">
+                                            <option value="">-- Нет подкатегории --</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="editDescription">Описание:</label>
+                                        <textarea id="editDescription" name="description" required></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="editPrice">Цена (руб):</label>
+                                        <input type="number" id="editPrice" name="price" min="0" step="0.01" required>
+                                    </div>
+                                    
+                                    <div class="form-group" style="display: flex;">
+                                        <div class="crd">
+                                            <label>Текущее изображение:</label>
+                                            <img id="currentImage" class="image-preview" src="" style="width: 100px;">
+                                        </div>
+                                        <div class="crd">
+                                            <label for="editImage">Новое изображение (оставьте пустым, чтобы не изменять):</label>
+                                            <input type="file" id="editImage" name="image" accept="image/*">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="editInStock">В наличии:</label>
+                                        <input type="checkbox" id="editInStock" name="in_stock">
+                                    </div>
+                                    
+                                    <button type="submit" class="submit-btn" >Сохранить изменения</button>
+                                    <button type="button" onclick="deleteProduct()" class="submit-btn delete-btn">Удалить товар</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </div>
+    
+    <footer>
+        <div class="foo-info">
+            <div class="foo-block">
+                <p>Телефон: +7 (916) 030-40-94</p>
+                <p>E-mail: dveri2dereviashka@yandex.ru</p>
+            </div>
+            <div class="foo-block">
+                <p>ИП Базаркин Алексей Викторович</p>
+                <p>ИНН: 502602905822</p>
+                <p>ОГРН: 323508100171838</p>
+            </div>
+        </div>
+        
+        <div class="address">г.о. Люберцы, р.п. Томилино, Новорязанское ш., 25-й км, с. 16, Центр Строймаркет, пав. 137Г-64Д</div>
+    </footer>
+    
+    <script src="../static/scripts/admin.js"></script>
+    <script src="../static/scripts/animations.js"></script>
+</body>
+</html>

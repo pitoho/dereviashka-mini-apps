@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали товара</title>
+    <link rel="stylesheet" href="../static/styles/style.css">
+    <link rel="stylesheet" href="../static/styles/menu.css">
+    <link rel="stylesheet" href="../static/styles/product.css">
+</head>
+<body>
+    <div id="notificationContainer"></div>
+    <header>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <div class="logo-block">
+            <a href="/"><img src="../static/images/logo_dereviashka_black.svg" alt=""></a>
+        </div>
+        <div class="profile-block">
+            <a href="/profile"><img src="../static/images/profile-icon-black.svg" alt=""></a>
+        </div>  
+        <nav class="menu">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/catalog">Каталог</a></li>
+                <li><a href="/services">Услуги</a></li>
+                <li><a href="/delivery">Доставка и оплата</a></li>
+                <li><a href="/contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main product-details-container">
+        <div class="breadcrumbs">
+            <a href="/catalog">Каталог</a> > <span id="productCategory"></span> > <span id="productNameTitle"></span>
+        </div>
+        
+        <div class="product-details">
+            <div class="product-gallery">
+                <img id="productImage" src="" alt="" class="main-image">
+            </div>
+            
+            <div class="product-info">
+                <h1 id="productName"></h1>
+                <div class="price-availability">
+                    <span id="productPrice" class="price"></span>
+                    <span id="productStock" class="stock"></span>
+                </div>
+                
+                <div class="product-description">
+                    <h3>Описание</h3>
+                    <p id="productDescription"></p>
+                </div>
+                
+                <button id="addToCart" class="add-to-cart">Добавить в корзину</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foo-info">
+            <div class="foo-block">
+            <p>Телефон: +7 (916) 030-40-94</p>
+            <p>E-mail: dveri2dereviashka@yandex.ru</p>
+            
+        </div>
+        <div class="foo-block">
+            <p>ИП Базаркин Алексей Викторович</p>
+            <p>ИНН: 502602905822</p>
+            <p>ОГРН: 323508100171838</p>
+        </div>
+        </div>
+        
+        <div class="address">г.о. Люберцы, р.п. Томилино, Новорязанское ш., 25-й км, с. 16, Центр Строймаркет, пав. 137Г-64Д</div>
+    </footer>
+    <script src="../static/scripts/animations.js"></script>
+    <script src="../static/scripts/product.js"></script>
+</body>
+</html>

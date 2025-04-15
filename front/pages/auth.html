@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorization</title>
+    <link rel="stylesheet" href="../static/styles/style.css">
+    <link rel="stylesheet" href="../static/styles/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <header>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="logo-block">
+                <a href="/"><img src="../static/images/logo_dereviashka_black.svg" alt=""></a>
+            </div>
+            <div class="profile-block">
+                <a href="/profile"><img src="../static/images/profile-icon-black.svg" alt=""></a>
+            </div>  
+            <nav class="menu">
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/catalog">Каталог</a></li>
+                    <li><a href="/services">Услуги</a></li>
+                    <li><a href="/delivery">Доставка и оплата</a></li>
+                    <li><a href="/contacts">Контакты</a></li>>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="main">
+            <div class="telegram-registration">
+                <h2>Вход через Telegram</h2>
+                <p>Для входа выполните следующие действия:</p>
+                
+                <div class="auth-steps">
+                    <div class="step">
+                        <p>Нажмите кнопку ниже, чтобы открыть Telegram</p>
+                        <button onclick="window.open('https://t.me/DereviashkaBot', '_blank')" class="telegram-btn">
+                            <img src="https://telegram.org/img/t_logo.png" width="30" alt="Telegram">
+                            Открыть Telegram
+                        </button>
+                    </div>
+                    
+                    <div class="step">
+                        <p>В боте используйте команду <strong>/login</strong> или кнопку <strong>Войти в личный кабинет на сайте</strong></p>
+                        <p>Введите полученный код здесь:</p>
+                        <!-- ERROR_MESSAGE -->
+                        <form method="POST" action="/auth">
+                            <input type="text" name="token" placeholder="Введите токен из Telegram">
+                            <button type="submit">Войти</button>
+                        </form>
+                          
+                    </div>
+                    <div class="step">
+                        <p class="help-text">Если у вас не работает кнопка, перейдите по ссылке: <br>
+                        <a href="https://t.me/DereviashkaBot">t.me/DereviashkaBot</a></p>
+                    </div>
+                </div>
+                
+               
+            </div>
+        </div>
+        <footer>
+            <div class="foo-info">
+                <div class="foo-block">
+                <p>Телефон: +7 (916) 030-40-94</p>
+                <p>E-mail: dveri2dereviashka@yandex.ru</p>
+                
+            </div>
+            <div class="foo-block">
+                <p>ИП Базаркин Алексей Викторович</p>
+                <p>ИНН: 502602905822</p>
+                <p>ОГРН: 323508100171838</p>
+            </div>
+            </div>
+            
+            <div class="address">г.о. Люберцы, р.п. Томилино, Новорязанское ш., 25-й км, с. 16, Центр Строймаркет, пав. 137Г-64Д</div>
+        </footer>
+    <script src="../static/scripts/animations.js"></script>
+</body>
+</html>
